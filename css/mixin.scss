@@ -1,0 +1,74 @@
+$main_color:#43b881;
+$blue_color: #030084;
+$kor_font:'Noto Sans KR', sans-serif;
+$en_font:'Montserrat', sans-serif;
+ 
+@mixin en{
+  font-family:$en_font;
+}
+@mixin clearfix{
+  &::after{
+    content:"";
+    clear: both;
+    display: block;
+  }
+}
+@mixin icon($pos,$code){
+  &::#{$pos}{ 
+    content:$code; 
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: bold;  
+  }
+}
+@mixin center($w,$mw){
+  width:$w;
+  max-width:$mw;
+  margin: 0 auto;
+}
+@mixin pos_center{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+@mixin bg_center{
+  background-size: cover;
+  background-position: center center;
+}
+@mixin block{
+  display: block;
+  width:100%;
+}
+@mixin win_border($b) {
+  box-sizing: border-box;
+  border: $b solid #EEE;
+  border-right-color: #999;
+  border-bottom-color: #999;
+}
+@mixin win_border_a($b){
+  box-sizing: border-box;
+  border: $b solid #EEE;
+  border-left-color: #999;
+  border-top-color: #999;
+  /* border-right-color: #EEE;
+  border-bottom-color: #EEE;
+  border-left-color: #999;
+  border-top-color: #999; */
+}
+@mixin padding_v($w,$pdv_lg,$pdv_sm){
+  box-sizing: border-box;
+  @media screen and (min-width:$w){
+    padding:$pdv_lg 0;
+  }/*lg*/
+  @media screen and (max-width:$w){
+    padding:$pdv_sm 0;
+  }/*sm*/
+}//padding_v
+
+@mixin shadow {
+  box-shadow: 0 0 5px 1px rgba(rgb(91, 156, 209), 0.3);
+}

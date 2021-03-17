@@ -1,0 +1,56 @@
+* {
+  word-break: keep-all;
+}
+
+.click, .zoom {
+  cursor: pointer;
+}
+
+html {
+  position: relative;
+}
+
+body {
+  font-size: 14px;
+  font-weight: 200;
+  color: #000;
+}
+
+.en {
+  font-family: "Montserrat", sans-serif;
+}
+
+::selection {
+  background: none;
+}
+
+.center {
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pos_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.padding_v {
+  box-sizing: border-box;
+  /*lg*/
+  /*sm*/
+}
+
+@media screen and (min-width: 1000px) {
+  .padding_v {
+    padding: 50px 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .padding_v {
+    padding: 50px 0;
+  }
+}

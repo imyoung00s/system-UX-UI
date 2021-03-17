@@ -1,0 +1,443 @@
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+.content.active {
+  left: 260px;
+  width: calc(100% - 260px);
+}
+
+@media screen and (max-width: 800px) {
+  .content.active {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.content .top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .top::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background: #b5b5b5;
+}
+
+.content .top .category_title {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.content .top .category_title i {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #666;
+}
+
+.content .top .category_title p {
+  font-weight: 400;
+  color: #5693f2;
+}
+
+.content .top .right_box {
+  display: flex;
+  align-items: center;
+}
+
+.content .top .right_box .num_container {
+  display: flex;
+}
+
+.content .top .right_box .num_container li {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.content .top .right_box .num_container li p {
+  padding: 5px 20px;
+  background: white;
+  border-radius: 5px;
+  transition: background 0.3s;
+  box-shadow: 0 0 5px 1px rgba(91, 156, 209, 0.3);
+  font-weight: 300;
+}
+
+.content .top .right_box .num_container li p:hover {
+  background: #ffef77;
+}
+
+.content .top .right_box .num_container li p.active {
+  font-weight: 600;
+  color: #dc5959;
+}
+
+.content .top .right_box .user {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.content .top .right_box .user figure {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.content .top .right_box .user figure img {
+  display: block;
+  width: 100%;
+}
+
+.content .top .right_box .user .user_info {
+  padding-bottom: 3px;
+  padding-left: 25px;
+  padding-right: 20px;
+  margin-left: -10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px rgba(91, 156, 209, 0.3);
+}
+
+.content .top .right_box .user .user_info .user_name {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.content .top .right_box .user .user_info .user_team {
+  font-size: 12px;
+  margin-top: -3px;
+}
+
+.content .top .right_box .moornmo {
+  height: 50px;
+}
+
+.content .top .right_box .moornmo img {
+  display: block;
+  height: 100%;
+}
+
+.eq_code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  margin-top: 15px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px rgba(91, 156, 209, 0.3);
+}
+
+.eq_code .wrap {
+  display: flex;
+  align-items: center;
+}
+
+.eq_code .wrap .code {
+  margin-left: 10px;
+  padding: 8px 25px;
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+.eq_code .wrap .code.code1 {
+  background: #b0cbf5;
+  color: #666;
+}
+
+.eq_code .wrap .code.code2 {
+  background: #70a4f5;
+  color: white;
+}
+
+.eq_code .eq_check {
+  margin-left: 10px;
+  padding: 5px 25px;
+  border-radius: 50px;
+  background: #dbe9ff;
+}
+
+.eq_code .eq_check input {
+  border: none;
+  background: #dbe9ff;
+  padding: 5px;
+  outline: none;
+  font-weight: 400;
+  color: #666;
+}
+
+.eq_code .eq_check button {
+  color: #dc5959;
+  font-weight: 500;
+}
+
+.info_container {
+  display: flex;
+}
+
+.info_container .info_box {
+  width: 47%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px rgba(91, 156, 209, 0.3);
+}
+
+.info_container .info_box.material_box ul, .info_container .info_box.order_box ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.info_container .info_box.material_box ul li, .info_container .info_box.order_box ul li {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  width: 48%;
+}
+
+.info_container .info_box.material_box ul li h4,
+.info_container .info_box.material_box ul li div, .info_container .info_box.order_box ul li h4,
+.info_container .info_box.order_box ul li div {
+  margin: 5px 0px;
+}
+
+.info_container .info_box.material_box ul li h4, .info_container .info_box.order_box ul li h4 {
+  position: relative;
+  width: 35%;
+  font-weight: 400;
+  height: 50px;
+  border-radius: 8px;
+  background: #608acb;
+  color: white;
+}
+
+.info_container .info_box.material_box ul li h4 p, .info_container .info_box.order_box ul li h4 p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.info_container .info_box.material_box ul li div, .info_container .info_box.order_box ul li div {
+  position: relative;
+  width: 65%;
+  background: #eff6ff;
+}
+
+.info_container .info_box.material_box ul li div p, .info_container .info_box.order_box ul li div p {
+  position: absolute;
+  font-weight: 400;
+  right: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.info_container .info_box.material_box ul li .kg_box, .info_container .info_box.order_box ul li .kg_box {
+  position: relative;
+}
+
+.info_container .info_box.material_box ul li .kg_box p:first-of-type, .info_container .info_box.order_box ul li .kg_box p:first-of-type {
+  left: 18% !important;
+}
+
+.info_container .info_box.material_box ul li .kg_box .kg, .info_container .info_box.order_box ul li .kg_box .kg {
+  width: 50px;
+  height: 100%;
+  right: 0;
+  background: #dc5959;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.info_container .info_box.material_box ul li .kg_box .kg span, .info_container .info_box.order_box ul li .kg_box .kg span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.info_container .eq_input_btn {
+  display: block;
+  width: 6%;
+  background: #59c369;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2em;
+  transition: background 0.5s;
+}
+
+.info_container .eq_input_btn i {
+  font-size: 3vw;
+  margin-top: 5px;
+}
+
+.info_container .eq_input_btn:hover {
+  background: #1d812c;
+}
+
+@media screen and (max-width: 900px) {
+  .info_container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .info_container .info_box,
+  .info_container .eq_input_btn {
+    width: 100%;
+  }
+  .info_container .eq_input_btn {
+    padding: 20px 0;
+  }
+}
+
+.status_container {
+  margin: 10px 0;
+}
+
+.status_container .tabmenu_container {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.status_container .tabmenu_container li {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.status_container .tabmenu_container li div {
+  margin-left: 10px;
+  padding: 5px 20px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.status_container .tabmenu_container li.tab1 {
+  background: #70a4f5;
+  color: white;
+}
+
+.status_container .tabmenu_container li.tab1 div {
+  background: #ffe200;
+  color: #333;
+}
+
+.status_container .tabmenu_container li.tab2 {
+  background: white;
+  color: #666;
+  margin-left: 10px;
+}
+
+.status_container .tabmenu_container li.tab2 div {
+  background: #59c369;
+  color: #333;
+}
+
+.status_container table {
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px 20px;
+  box-shadow: 0 0 5px 1px rgba(91, 156, 209, 0.3);
+}
+
+.status_container table tr::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 1px;
+  background: #b5b5b5;
+}
+
+.status_container table thead {
+  position: relative;
+}
+
+.status_container table thead tr th {
+  padding: 20px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.status_container table thead tr th:last-of-type {
+  text-align: center;
+}
+
+.status_container table tbody {
+  position: relative;
+}
+
+.status_container table tbody tr:nth-of-type(odd) {
+  background: #eef6ff;
+}
+
+.status_container table tbody tr td {
+  padding: 8px 0;
+  padding-left: 20px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.status_container table tbody tr td:first-of-type {
+  padding-left: 30px;
+}
+
+.status_container table tbody tr td:last-of-type button {
+  display: block;
+  margin: 0 auto;
+  font-weight: 500;
+  color: white;
+  background: #f04242;
+  padding: 8px 30px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.status_container table tbody tr td:last-of-type button i {
+  margin-right: 5px;
+}
+
+.status_container table tbody tr td:last-of-type button:hover {
+  background: #8b1212;
+}
+
+.section_title {
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+}
